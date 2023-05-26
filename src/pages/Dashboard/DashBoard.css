@@ -1,0 +1,23 @@
+:root {
+    /* Variables de colores */
+   /* --rojo: #FF5656;
+    --azul: #6A7EFC;
+    --negro: #494953;
+    --gris: #edf2f6;
+    
+      /* Fuentes */
+     --fuente:'Source Sans Pro', sans-serif;  /* Tamaños tipográficos */
+      --parrafos: 12px;
+      --titulos: 24px;
+      --precio: 18px;
+      --descuento: 16px;
+      --descripcion: 16px;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fuente);
+}

@@ -1,0 +1,56 @@
+/*:root {
+    /* Variables de colores */
+   /* --rojo: #FF5656;
+    --azul: #6A7EFC;
+    --negro: #494953;
+    --gris: #edf2f6;
+    
+      /* Fuentes */
+     /* --fuente:'Source Sans Pro', sans-serif;  /* Tamaños tipográficos */
+     /* --parrafos: 12px;
+      --titulos: 24px;
+      --precio: 18px;
+      --descuento: 16px;
+      --descripcion: 16px;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fuente);
+}
+
+
+.header {
+    background: linear-gradient(270deg, #6a7efc, #ff5656);
+}
+ .sidebar {
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+ }
+ 
+ .footer {
+    background-color: #494953;
+ }
+
+ .btn{
+    color: white;
+    width: 200px;
+    height: 35px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: black;
+    background: linear-gradient(93deg,#ff5656, #6a7efc);
+}
+

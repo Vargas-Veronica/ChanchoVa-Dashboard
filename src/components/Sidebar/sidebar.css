@@ -1,0 +1,25 @@
+sidebar{
+    color:white;
+}
+.bg {
+    background: linear-gradient(90deg, #6a7efc ,#494953 );
+    color: white;
+
+}
+
+.sidebar-brand{
+    color: black;
+    background-color: #FF5656;
+}
+
+.sidebar{
+    color: white;
+}
+
+a{
+    color: white;
+}
+
+a:hover {
+    color: silver;
+}

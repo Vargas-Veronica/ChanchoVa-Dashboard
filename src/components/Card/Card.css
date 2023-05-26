@@ -1,0 +1,14 @@
+.card-body {
+    border: 1px solid lightgray;
+    box-shadow: 0px 5px 5px;
+    border-radius: 10px;
+    color: black;
+}
+.card-body:hover{
+    box-shadow: 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.card .border-left{
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+}

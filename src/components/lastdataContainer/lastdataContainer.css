@@ -1,0 +1,26 @@
+.btn{
+    color: white;
+    width: 200px;
+    height: 35px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    padding-bottom: 5px;
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    color: black;
+    background: linear-gradient(93deg,#ff5656, #6a7efc);
+}
+
+.card-header.py-3{
+    background: linear-gradient(93deg, #6a7efc, #ff5656);
+    color: white;
+
+}

@@ -1,6 +1,6 @@
 import "./DashBoard.css"
 import { Card } from "../../components/Card";
-import { LastDataContainer } from "../../components/LastDataContainer";
+/* import LastDataContainer from "../../components/LastDataContainer"; */
 import { useState, useEffect } from "react";
 import { getProducts } from "../../services/products.service";
 import { Loading } from "../../components/Loading";

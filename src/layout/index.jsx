@@ -1,18 +1,22 @@
-import "./Layout.css"
 import { Footer } from "../components/Footer";
-import { Sidebar } from "../components/Sidebar";
 import { Header } from "../components/Header";
-
-export const Layout = ( {children}) => {
+import { Sidebar } from "../components/Sidebar";
+import PropTypes from "prop-types";
+import "./Layout.css"
+export const Layout = ({children}) => {
   return (
     <div id="wrapper">
-      <Sidebar/>
-      <div id="content-wrapper" class="d-flex flex-column">
-       <Header />
+      <Sidebar />
+      <div id="content-wrapper" className="d-flex flex-column">
+        <Header />
         <div id="content">{children}</div>
-       
-        <Footer />
+
+        <Footer autor={"Chancho Va!"}/>
       </div>
     </div>
   );
 };
+
+Layout.propTypes = { 
+  children: PropTypes.object.isRequired,
+}

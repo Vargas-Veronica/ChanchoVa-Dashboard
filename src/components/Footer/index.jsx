@@ -1,15 +1,17 @@
 import "./Footer.css"
-export const Footer = ()=>{
-    return (
-        <footer class="sticky-footer ">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<span>Copyright &copy; Chancho Va! 2021</span>
-					</div>
-				</div>
-			</footer>
-       
-    )
+export const Footer = ({autor}) => {
+	return (
+	  <>
+		{/* <!-- Footer --> */}
+		<footer className="sticky-footer bg-dark">
+		  <div className="container my-auto">
+			<div className="copyright text-center my-auto">
+			  <span>Copyright &copy; {autor}</span>
+			</div>
+		  </div>
+		</footer>
+		{/* <!-- End of Footer --> */}
+	  </>
+	);
+  };
     
-    }
-

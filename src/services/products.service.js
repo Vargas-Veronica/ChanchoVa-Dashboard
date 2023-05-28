@@ -1,6 +1,13 @@
-const BASE_PRODUCTS_URL_API = "http://localhost/3000/api/products"
+const BASE_PRODUCTS_URL_API = "http://localhost:3001/api/products"
+
 export const getProducts = async () => {
-    const response = await fetch (BASE_PRODUCTS_URL_API)
-    const data = await response.json()
-        return data
+    try {
+        const response = await fetch(BASE_PRODUCTS_URL_API);
+        const json = await response.json();
+        return json;
+        
+    } catch (error) {
+        console.error("Error while fetching products");
+        return Promise.reject("Error while fetching products")
+    }
 }

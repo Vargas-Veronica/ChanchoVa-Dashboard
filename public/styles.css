@@ -21,16 +21,16 @@
     margin: 0;
     font-family: var(--fuente);
 }
+*/
 
-
-.header {
+header {
     background: linear-gradient(270deg, #6a7efc, #ff5656);
 }
- .sidebar {
+ sidebar {
     background: linear-gradient(90deg, #6a7efc ,#494953 );
  }
  
- .footer {
+ footer {
     background-color: #494953;
  }
 

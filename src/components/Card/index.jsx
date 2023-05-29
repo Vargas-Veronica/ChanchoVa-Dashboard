@@ -17,7 +17,7 @@ export const Card = ({ color, title, quantity, icon, href }) => {
                 {quantity}
               </div>
               <div>
-                <Link to={href}>Detalle</Link>
+                <Link to={href} className="text-gray-500" >Detalle</Link>
               </div>
             </div>
             <div className="col-auto">

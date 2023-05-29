@@ -1,6 +1,5 @@
-import "./DashBoard.css"
+//import "./DashBoard.css"
 import { Card } from "../../components/Card";
-/* import LastDataContainer from "../../components/LastDataContainer"; */
 import { useState, useEffect } from "react";
 import { getProducts } from "../../services/products.service";
 import { Loading } from "../../components/Loading";
@@ -9,6 +8,8 @@ import { generateCards } from "../../helpers/dashboard.helper";
 import { Alert } from "../../components/Alert";
 import { ShowError } from "../../components/Error";
 import { CategoriesChart } from "../../components/CategoriesChart";
+import {LastDataContainer } from "../../components/LastDataContainer"
+
 
 export const Dashboard = () => {
   const [products, setProducts] = useState(null);
@@ -90,10 +91,13 @@ export const Dashboard = () => {
       </div>
 
       <div className="row">
-    
+        <LastDataContainer type="product" data={lastProductCreated} />
+        <LastDataContainer type="user" data={lastUserCreated} />
+      
       </div>
       <div className="row">
             <CategoriesChart countByCategory={products?.countByCategory}/>
+          
       </div>
     </div>
   );

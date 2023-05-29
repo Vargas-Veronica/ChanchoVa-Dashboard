@@ -4,7 +4,7 @@ import { SidebarLogo } from "./components/Logo";
 import Logo from "../../assets/logo.png";
 import { NavItem } from "./components/NavItem";
 
-const TITLE = "Dashboard Artística";
+const TITLE = "Chancho Va!";
 
 export const Sidebar = () => {
   return (
@@ -15,7 +15,7 @@ export const Sidebar = () => {
         id="accordionSidebar"
       >
         {/* <!-- Sidebar - Brand --> */}
-        <SidebarLogo brand="Artistica Dalí" logo={Logo} />        
+        <SidebarLogo brand="Chancho Va!" logo={Logo} />        
         {/* <!-- Divider --> */}
         <hr className="sidebar-divider my-0" />
 

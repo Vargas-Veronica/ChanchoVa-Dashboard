@@ -4,6 +4,7 @@ import { Dashboard } from "../pages/Dashboard";
 import { Auth } from "../pages/Auth";
 import { NotFound } from "../pages/NotFound";
 import { Detail } from "../pages/Detail";
+import { DetailPerPage } from "../pages/DetailPerPage";
 
 export const AppRoutes = () => {
   return (
@@ -11,7 +12,8 @@ export const AppRoutes = () => {
       <Route path="/" element={<Dashboard />} />
       <Route path="/login" element={<Auth />} />
       <Route path="*" element={<NotFound />} />
-      <Route path="/detail" element={<Detail />} />
+      <Route path="/products" element={<Detail />} />
+      <Route path="/pageProducts" element={<DetailPerPage />} />
     </Routes>
   );
 };

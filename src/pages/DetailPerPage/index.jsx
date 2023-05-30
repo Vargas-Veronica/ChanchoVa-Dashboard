@@ -13,7 +13,7 @@ import { List } from "../../components/List";
 import { Button } from "../../components/Button";
 
 
-export const Detail = () => {
+export const DetailPerPage = () => {
   const [products, setProducts] = useState(null);
   const [users, setUsers] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -30,6 +30,7 @@ export const Detail = () => {
   const [productsList, setProductsList] = useState([]);
 
   const [pagedProducts, setPagedProducts] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   let handlePagedProducts = () => {
     setPagedProducts(!pagedProducts);
@@ -39,28 +40,37 @@ export const Detail = () => {
   useEffect(() => {
     setIsLoading(true);
 
-    const fetchProducts = getProducts();
+    const fetchProducts = async () => {
+        try {
+            const response = await fetch(`http://localhost:3001/api/products/?page=${currentPage}`);
+            const data = await response.json();
+            return data;
+          
+        } catch (error) {
+          console.error('Error fetching products:', error);
+        }
+      };
 
-    const fetchUsers = getUsers();
+      const fetchUsers = getUsers();
 
-    Promise.all([fetchProducts, fetchUsers])
-      .then(([productsResponse, usersResponse]) => {
-        setProducts(productsResponse);
-        setUsers(usersResponse);
-      })
-      .catch((error) => {
-        console.error(error);
-
-        setAlert({
-          message: "Ocurrió un error al obtener la información",
-          type: "danger",
-          show: true,
-        });
-
-        setError(true);
-      })
-      .finally(setIsLoading(false));
-  }, []);
+      Promise.all([fetchProducts, fetchUsers])
+        .then(([productsResponse, usersResponse]) => {
+          setProducts(productsResponse);
+          setUsers(usersResponse);
+        })
+        .catch((error) => {
+          console.error(error);
+  
+          setAlert({
+            message: "Ocurrió un error al obtener la información",
+            type: "danger",
+            show: true,
+          });
+  
+          setError(true);
+        })
+        .finally(setIsLoading(false));
+    }, []);
 
   useEffect(() => {
     if (!products || !users) return;
@@ -73,7 +83,7 @@ export const Detail = () => {
     setCardsData(cards);
     setProductsList(productsList);
     
-  }, [products, users]);
+  }, [products, users, currentPage]);
 
   if (isLoading) return <Loading />;
 
@@ -104,7 +114,7 @@ export const Detail = () => {
       </div>
       <div>
 
-        <Button className="btn btn-primary" text="Productos Paginados" handleClick={handlePagedProducts} />
+        <Button className="btn btn-primary" text="Todos los productos" handleClick={handlePagedProducts} />
 
       </div>
       <div className="row">
@@ -119,7 +129,19 @@ export const Detail = () => {
             />
             ))}
       </div>
-
+      <div>
+            {/* Controles de paginación */}
+        <button
+            onClick={() => setCurrentPage(currentPage - 1)}
+            disabled={currentPage === 1}
+        >
+            Anterior
+        </button>
+        
+        <button onClick={() => setCurrentPage(currentPage + 1)}>
+            Siguiente
+        </button>
+      </div>
     </div>
   );
 };

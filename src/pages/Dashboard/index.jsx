@@ -8,7 +8,7 @@ import { generateCards } from "../../helpers/dashboard.helper";
 import { Alert } from "../../components/Alert";
 import { ShowError } from "../../components/Error";
 import { CategoriesChart } from "../../components/CategoriesChart";
-import {LastDataContainer } from "../../components/LastDataContainer"
+import {LastDataContainer } from "../../components/LastdataContainer";
 
 
 export const Dashboard = () => {
@@ -62,6 +62,7 @@ export const Dashboard = () => {
     setLastProductCreated(productsList.pop());
     setLastUserCreated(usersList.pop());
     setCardsData(cards);
+    
   }, [products, users]);
 
   if (isLoading) return <Loading />;

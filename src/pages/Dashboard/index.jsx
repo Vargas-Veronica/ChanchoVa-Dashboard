@@ -10,6 +10,8 @@ import { ShowError } from "../../components/Error";
 import { CategoriesChart } from "../../components/CategoriesChart";
 import {LastDataContainer } from "../../components/LastdataContainer";
 
+/* un arreglo */
+
 
 export const Dashboard = () => {
   const [products, setProducts] = useState(null);

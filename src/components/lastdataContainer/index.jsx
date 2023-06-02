@@ -9,6 +9,8 @@ export const LastDataContainer = ({type, data}) => {
 	});
 	const {title, imageUrl, description, name} = infoToDisplay;
 
+	/* asegurarse que la carpeta tenga el nombre en mayuscula */
+
 	useEffect(() => {
 		if(!data) return;
 
